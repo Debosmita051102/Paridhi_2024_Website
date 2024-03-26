@@ -1,0 +1,55 @@
+
+import Layout from "./Layout/Layout";
+import Hero from "./Components/Hero/Hero";
+import Events from "./Components/Events/Events";
+import WorkShop from "./Components/WorkShop/WorkShop";
+import OurTeam from "./Components/OurTeam/OurTeam";
+import Sponsors from "./Components/Sponsors/Sponsors";
+import PrePredhiEvents from "./Components/PreParedhiEvents/PrePredhiEvents";
+import { Registration } from "./Components/Registration/Registration";
+import DomainEvents from "./Components/Events/DomainEvents/DomainEvents";
+import SignUp from "./Components/SignUp/SignUp";
+import Login from "./Components/Login_coding/Login_coding";
+import Profile from "./Components/Profile/Profile"
+
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  
+} from "react-router-dom";
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      
+      <Route path="" element={<Hero />} />
+      <Route path="events" element={<Events />} />
+      <Route path="workshop" element={<WorkShop />} />
+      <Route path="our_team" element={<OurTeam />} />
+      <Route path="sponsors" element={<Sponsors />} />
+      <Route path="pre_paredhi_events" element={<PrePredhiEvents />} />
+      <Route path="events/:Domain" element={<DomainEvents />} />
+      <Route path="events/:Domain" element={<DomainEvents />} />
+      <Route path="sign_up" element={<SignUp />} />
+      <Route path="login" element={<Login />} />
+      <Route path="profile" element={<Profile />} />
+
+      <Route
+        path="events/:Domain/:EvnetRegistration"
+        element={<Registration />}
+      />
+      
+    </Route>
+  )
+);
+
+export default function App() {
+  return (
+    <div className="main">
+      <RouterProvider router={router} />
+    </div>
+  );
+}
