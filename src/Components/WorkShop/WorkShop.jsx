@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledContainer } from "./WorkShop.styled";
+import { StyledContainer } from "./Workshop.styled";
 import { Card2 } from "../Cards/Card2";
 
 const WorkShop = () => {
